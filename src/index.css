@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-ink: #070a12;
+  --color-panel: #0d1420;
+  --color-line: #223048;
+  --color-mute: #8b9bb4;
+  --color-proton: #4cc9f0;
+  --color-anti: #ff4d9d;
+  --color-posi: #b8f35a;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #070a12;
+  color: #e8eef8;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid #4cc9f0;
+  outline-offset: 2px;
+}
+
+/* 3D labels */
+.lbl {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px 3px 3px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+  background: rgba(9, 14, 23, 0.82);
+  color: #e8eef8;
+  font: 500 12px/1 var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transform-origin: center;
+  transition: background-color 0.15s, border-color 0.15s, padding 0.15s;
+}
+.lbl-n {
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--c);
+  color: #070a12;
+  font: 700 11px/1 var(--font-mono);
+}
+.lbl.far {
+  padding: 3px;
+}
+.lbl.far .lbl-t {
+  display: none;
+}
+.lbl.hover,
+.lbl:hover,
+.lbl.on {
+  background: #141d2e;
+  border-color: var(--c);
+  z-index: 5;
+}
+.lbl.hover .lbl-t,
+.lbl:hover .lbl-t {
+  display: inline;
+}
+.lbl.hover,
+.lbl:hover {
+  padding: 3px 9px 3px 3px;
+}
+.lbl.on {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 30%, transparent);
+}
+
+/* Slim scrollbars for panels */
+.scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3a55 transparent;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.28s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+  .lbl {
+    transition: none;
+  }
+}

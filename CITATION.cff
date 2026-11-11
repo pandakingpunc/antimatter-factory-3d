@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "Antimatter Factory: an interactive 3D tour of CERN's AD / ELENA antimatter chain"
+abstract: >-
+  An interactive browser model of how antimatter is made at CERN, from the
+  hydrogen source through Linac4, the PS Booster and the Proton Synchrotron to
+  the iridium target, the Antiproton Decelerator, ELENA, the experiments and a
+  close-up trap lab. 21 clickable stations with short explanations, key
+  figures and a guided tour. The model is schematic; scale and layout are
+  simplified. Turkish and English interfaces.
+authors:
+  - family-names: Karatüm
+    given-names: Mustafa
+    orcid: "https://orcid.org/0009-0006-7053-2872"
+version: 1.0.0
+license: MIT
+date-released: 2026-11-11
+repository-code: "https://github.com/pandakingpunc/antimatter-factory-3d"
+keywords:
+  - antimatter
+  - CERN
+  - antiproton decelerator
+  - ELENA
+  - antihydrogen
+  - three.js
+  - education
+  - visualization
