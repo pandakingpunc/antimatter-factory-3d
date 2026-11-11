@@ -2,6 +2,8 @@
 
 An interactive 3D model of how antimatter is made at CERN, from a bottle of hydrogen gas to a trapped anti-atom. It follows the real chain: protons are accelerated, smashed into a target, and the antiprotons that come out are slowed down, cooled and handed to the experiments. The tour runs in the browser and is built with React, TypeScript, three.js, Vite and Tailwind. Turkish and English (TR | EN toggle in the header).
 
+**Live:** https://pandakingpunc.github.io/antimatter-factory-3d/
+
 ![Overview of the antimatter factory](screenshots/overview.png)
 
 ## What you can do

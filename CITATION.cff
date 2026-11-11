@@ -17,6 +17,7 @@ version: 1.0.0
 license: MIT
 date-released: 2026-11-11
 repository-code: "https://github.com/pandakingpunc/antimatter-factory-3d"
+url: "https://pandakingpunc.github.io/antimatter-factory-3d/"
 keywords:
   - antimatter
   - CERN
